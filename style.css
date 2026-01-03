@@ -1,0 +1,636 @@
+/* Загальні стилі */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #2B2B2B;
+  background-color: #F8F6F2;
+}
+
+/* Хедер */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1C1C1C;
+  padding: 10px 25px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  transition: top 0.3s ease, opacity 0.3s ease;
+}
+
+header.hide {
+  top: -100px;
+  opacity: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #E0E0E0;
+  margin: 0 15px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #D8C3A5;
+}
+
+/* Герой-секція */
+.hero {
+  background: url("background-one.png") center/cover no-repeat;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(130, 121, 112, 0.4);
+}
+
+.hero-text {
+  position: relative;
+  max-width: 1000px;
+  text-align: center;
+  color: #FFFFFF;
+  z-index: 1;
+  padding: 20px;
+  animation: fadeIn 1.5s ease;
+}
+
+.hero-text h1 {
+  font-size: 46px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.hero-text p {
+  font-size: 25px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.hero-buttons button {
+  background-color: #D8C3A5;
+  color: #3E2F27;
+  border: none;
+  padding: 20px 75px;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.hero-buttons button:hover {
+  background-color: #C19A6B;
+  transform: scale(1.05);
+} 
+
+/* Роздільник */
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #D8C3A5;
+  margin: 60px auto;
+  width: 70%;
+  box-shadow: 0 0 15px 10px rgba(209, 190, 160, 0.3);
+}
+
+/* Наші послуги */
+.services {
+  text-align: center;
+  padding: 0px 80px 100px;
+}
+
+.services h2 {
+  font-size: 40px;
+  color: #3E2F27;
+  margin-bottom: 60px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+}
+
+.service-card {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3e6d2;
+  border: 1px solid #E0D6C5;
+  width: 400px;
+  height: 230px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.service-card:hover img {
+  transform: scale(1.1);
+}
+
+.service-card h3 {
+  text-decoration: none !important;
+  color: #3E2F27 !important;
+  margin: 1;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Контактна секція */
+.contact-section {
+  background-color: #f3e6d2;
+  padding: 80px 10%;
+  color: #3E2F27;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #3E2F27;
+}
+
+.contact-info p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.contact-link {
+  color: #3a2c1a; /* приємний темний колір тексту */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #9D7C54; /* твій фірмовий відтінок */
+}
+
+.icon {
+  width: 40px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.contact-line {
+  font-weight: 500;
+  color: #3E2F27;
+}
+
+.contact-note {
+  font-style: italic;
+  margin-top: 10px;
+  color: #5b4b3d;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 320px;
+  background: #fff;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full textarea {
+  resize: none;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.form-group.checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-group.checkbox label {
+  margin: 0 0 0 10px;
+  font-size: 14px;
+}
+
+.form-group.checkbox a {
+  color: #C19A6B;
+  text-decoration: underline;
+}
+
+.send-btn {
+  background-color: #C19A6B;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #a57f59;
+}
+
+/* Адаптивність */
+@media (max-width: 850px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+/* FAQ */
+.faq {
+  background-color: #F8F6F2;
+  padding: 90px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.faq-header h2 {
+  font-size: 40px;
+  color: #2B2B2B;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.faq-header h2 span {
+  color: #9D7C54;
+  font-style: italic;
+}
+
+.faq-header p {
+  color: #555;
+  font-size: 17px;
+  margin-bottom: 50px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.faq-title {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 22px 26px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #2B2B2B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-title:hover {
+  color: #9D7C54;
+}
+
+.faq-icon {
+  font-size: 22px;
+  color: #9D7C54;
+  transition: transform 0.3s ease;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  font-size: 16px;
+  color: #444;
+  background: #fff;
+  padding: 0 26px;
+  line-height: 1.6;
+  transition: all 0.4s ease;
+}
+
+.faq-item.active .faq-content {
+  max-height: 400px;
+  padding: 18px 26px 26px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-footer {
+  margin-top: 40px;
+  font-style: italic;
+  color: #555;
+}
+
+.faq-footer a {
+  color: #9D7C54;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.faq-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-header h2 {
+    font-size: 32px;
+  }
+  .faq-title {
+    font-size: 17px;
+  }
+}
+
+/* Футер */
+.footer {
+  background-color: #1A1A1A;
+  padding: 60px 40px;
+  color: #D8C3A5;
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.footer hr {
+  width: 70%;
+  border: none;
+  border-top: 2px solid #C19A6B;
+  margin: 10px 0 20px 0;
+}
+
+.footer a {
+  color: #D8C3A5;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer-logo {
+  width: 175px;
+  margin-bottom: 25px;
+}
+
+.footer-col p {
+  margin: 6px 0;
+}
+
+/* Адаптивність */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .footer {
+    text-align: center;
+  }
+}
+
+/* Анімація */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Стрілка "вгору" */
+#scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #C19A6B;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: opacity 0.3s, transform 0.3s, background 0.3s;
+  z-index: 1000;
+}
+
+#scrollToTop:hover {
+  background-color: #C19A6B;
+  transform: scale(1.1);
+}
+
+/* Випадаюче меню */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  color: #F5F5F0;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.dropbtn:hover {
+  color: #D8C3A5;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f3e6d2;
+  min-width: 300px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  border-radius: 8px;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+  animation: dropdownFade 0.25s ease;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #3E2F27;
+  padding: 12px 18px;
+  text-decoration: none;
+  display: block;
+  font-size: 17px;
+  transition: background-color 0.3s ease, padding-left 0.2s ease;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #e7d6bb;
+  padding-left: 22px;
+}
+
+/* Показуємо при наведенні */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Анімація появи меню */
+@keyframes dropdownFade {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Адаптивність */
+@media (max-width: 800px) {
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  .dropdown-content a {
+    padding: 10px 0;
+    border: none;
+    background: none;
+    color: #F5F5F0;
+  }
+
+  .dropdown-content a:hover {
+    background: none;
+    color: #D8C3A5;
+  }
+}
+

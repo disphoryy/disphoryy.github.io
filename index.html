@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innen Fix — Ремонт інтер'єрів</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="alternate" href="https://innenfix.com/index.html" hreflang="de" />
+</head>
+
+<body>
+  <header>
+    <a href="#home" class="logo"><img src="logo.png" width="170" height="80"></a>
+    <nav>
+      <a href="#home">Home</a>
+
+      <div class="dropdown">
+        <a href="#services" class="dropbtn">Leistungen ▾</a>
+        <div class="dropdown-content">
+          <a href="malerarbeiten.html">Malerarbeiten</a>
+          <a href="gipskarton.html">Montage von Gipskarton und abgehängten Decken</a>
+          <a href="bodenverlegung.html">Bodenverlegung</a>
+          <a href="sockelleisten.html">Montage von Sockelleisten, Türen und Fenstern</a>
+          <a href="mobelmontage.html">Möbelmontage</a>
+          <a href="sanitararbeiten.html">Sanitärarbeiten</a>
+          <a href="elektroinstallationsarbeiten.html">Elektroinstallationsarbeiten</a>
+          <a href="fliesenarbeiten.html">Fliesenarbeiten</a>
+          <a href="sonstiges.html">Sonstiges</a>
+        </div>
+      </div>
+
+      <a href="#contact">Kontakt</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1 id="typed-text"></h1>
+      <p>Innen Fix – Wir bringen neues Leben in Ihre Räume. Mit Erfahrung, Stil und Sorgfalt schaffen wir Ihr perfektes Zuhause</p>
+      <div class="hero-buttons">
+        <button id="to-services">Zu unseren Leistungen</button>
+        <button id="to-contact">Kontakt</button>
+      </div>
+
+    </div>
+  </section>
+
+<hr class="divider">
+
+<section class="services" id="services">
+  <h2>Unsere Leistungen im Überblick</h2>
+  <div class="service-container">
+    
+  <a href="malerarbeiten.html" class="service-card">
+    <img src="icons1.png" alt="Malerarbeiten">
+    <h3>Malerarbeiten</h3>
+  </a>
+
+  <a href="gipskarton.html" class="service-card">
+    <img src="icons2.png" alt="Montage von Gipskarton">
+    <h3>Montage von Gipskarton und abgehängten Decken</h3>
+  </a>
+
+  <a href="bodenverlegung.html" class="service-card">
+    <img src="icons3.png" alt="Bodenverlegung">
+    <h3>Bodenverlegung</h3>
+    </a>
+
+  <a href="sockelleisten.html" class="service-card">
+    <img src="icons4.png" alt="Montage von Sockelleisten">
+    <h3>Montage von Sockelleisten, Türen und Fenstern</h3>
+  </a>
+
+  <a href="mobelmontage.html" class="service-card">
+    <img src="icons5.png" alt="Möbelmontage">
+    <h3>Möbelmontage</h3>
+  </a>
+
+  <a href="sanitararbeiten.html" class="service-card">
+    <img src="icons6.png" alt="Sanitärarbeiten">
+    <h3>Sanitärarbeiten</h3>
+  </a>
+
+  <a href="elektroinstallationsarbeiten.html" class="service-card">
+    <img src="icons7.png" alt="Elektroinstallationsarbeiten">
+    <h3>Elektroinstallationsarbeiten</h3>
+  </a>
+
+  <a href="fliesenarbeiten.html" class="service-card">
+    <img src="icons8.png" alt="Fliesenarbeiten">
+    <h3>Fliesenarbeiten</h3>
+  </a>
+
+  <a href="sonstiges.html" class="service-card">
+    <img src="icons9.png" alt="Sonstiges">
+    <h3>Sonstiges</h3>
+  </a>
+
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>Kontaktieren Sie uns</h2>
+      <p>Haben Sie eine Idee oder benötigen Sie eine Renovierung? Schreiben Sie uns – wir helfen Ihnen gerne weiter!</p>
+
+      <p>
+        <a href="tel:+491783413562" class="contact-link">
+          <img src="phone-icon.png" alt="Telefon" class="icon"> +49 178 3413 562
+        </a>
+      </p>
+      <p>
+        <a href="mailto:info@innenfix.com" class="contact-link">
+          <img src="mail-icon.png" alt="E-Mail" class="icon"> info@innenfix.com
+        </a>
+      </p>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-Mail *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Telefon</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div class="form-group full">
+        <label for="message">Ihre Nachricht *</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+
+      <div class="form-group checkbox">
+        <input type="checkbox" id="privacy" required>
+        <label for="privacy">Ich stimme der <a href="privacy.html">Datenschutzerklärung</a> zu.</label>
+      </div>
+
+      <button type="submit" class="send-btn">Senden</button>
+    </form>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="faq-container">
+    <div class="faq-header">
+      <h2>Häufig gestellte Fragen <span>(FAQ)</span></h2>
+      <p>Wir haben die häufigsten Fragen unserer Kunden gesammelt, um Ihnen die Entscheidung zu erleichtern.</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-title">
+          Was passiert, nachdem ich Innen Fix kontaktiert habe?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p>Nach Ihrer Anfrage kontaktieren wir Sie, führen eine Beratung durch und vereinbaren einen Termin zur Besichtigung. Nach der Kostenschätzung und Abstimmung der Details beginnen wir mit den Arbeiten so schnell wie möglich.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-title">
+          Bieten Sie eine Garantie auf Ihre Arbeiten an?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p>Ja, wir bieten eine offizielle Garantie auf alle ausgeführten Arbeiten. Die Dauer hängt von der Art der Leistung ab, beträgt jedoch mindestens 12 Monate.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-title">
+          Kann ich nur eine teilweise oder kosmetische Renovierung bestellen?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p>Ja, wir führen sowohl komplette Renovierungen als auch Teilmodernisierungen durch – z. B. Streichen, Tapezieren, Bodenverlegung oder Möbelmontage.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-title">
+          Führen Sie auch kleine Reparaturen oder Möbelmontagen durch?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p>Ja, wir helfen Ihnen gerne bei kleineren Arbeiten – z. B. Möbelmontage, Regalinstallation, Austausch von Türen, Sockelleisten oder Lampen.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="faq-footer">Wenn Sie weitere Fragen haben – <a href="#contact">kontaktieren Sie uns</a>, wir helfen Ihnen gerne weiter!</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-col logo-col">
+      <img src="logo.png" class="footer-logo">
+      <p>© 2025 INNEN FIX</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Kontakt</h3>
+      <hr>
+      <p>📧 <a href="mailto:info@innenfix.com">info@innenfix.com</a></p>
+      <p>📞 <a href="tel:+491783413562">+49 178 3413 562</a></p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Telefonzeiten</h3>
+      <hr>
+      <p>MO–FR: 7:00–18:00</p>
+      <p>SA: 9:00–14:00</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Links</h3>
+      <hr>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Leistungen</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Rechtliches</h3>
+      <hr>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="privacy.html">Datenschutzerklärung</a></li>
+        <li><a href="#">Barrierefreiheitserklärung</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollToTop" title="Повернутись вгору">▲</button>
+<script src="script.js"></script>
+</body>
+</html>

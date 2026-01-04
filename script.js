@@ -1,8 +1,3 @@
-// Відключаємо стандартний перехід вгору для всіх href="#"!!!!!!!!!!!!!!!!!!!!!!!
-document.querySelectorAll('a[href="#"]').forEach(link => {
-  link.addEventListener('click', e => e.preventDefault());
-});
-
 const scrollBtn = document.getElementById("scrollToTop");
 
 // Показуємо стрілку при прокрутці
@@ -81,14 +76,15 @@ let lastScrollY = window.scrollY;
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > lastScrollY && window.scrollY > 100) {
-    // Прокручуємо вниз
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScrollY + 10 && currentScroll > 120) {
     header.classList.add("hide");
-  } else {
-    // Прокручуємо вгору
+  } else if (currentScroll < lastScrollY - 10) {
     header.classList.remove("hide");
   }
-  lastScrollY = window.scrollY;
+
+  lastScrollY = currentScroll;
 });
 
 // Обробка форми

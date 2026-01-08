@@ -4,299 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datenschutzerklärung — Innen Fix</title>
+  <meta name="description" content="Datenschutzerklärung der Innen Fix UG (haftungsbeschränkt). Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #fff;
-      color: #3E2F27;
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.8;
-      margin: 0;
-    }
-
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #1C1C1C;
-        padding: 10px 25px;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-        transition: top 0.3s ease, opacity 0.3s ease;
-      }
-
-      header.hide {
-        top: -100px;
-        opacity: 0;
-      }
-
-      nav a {
-        text-decoration: none;
-        color: #E0E0E0;
-        margin: 0 15px;
-        font-size: 18px;
-        transition: color 0.3s;
-      }
-
-      nav a:hover {
-        color: #D8C3A5;
-      }
-    
-    .privacy-container {
-      max-width: 1000px;
-      margin: 60px auto;
-      background: #fff;
-      padding: 50px 60px;
-      border-radius: 12px;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-    }
-
-    .privacy-container h1 {
-      font-size: 42px;
-      color: #3E2F27;
-      text-align: center;
-      margin-bottom: 40px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .privacy-container h2 {
-      font-size: 26px;
-      color: #C19A6B;
-      margin-top: 40px;
-      margin-bottom: 15px;
-    }
-
-    .privacy-container p {
-      font-size: 18px;
-      color: #4b3a2e;
-      margin-bottom: 18px;
-    }
-
-    .back-btn {
-      display: block;
-      width: fit-content;
-      margin: 50px auto 0;
-      background-color: #D8C3A5;
-      color: #3E2F27;
-      border: none;
-      padding: 14px 40px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 18px;
-      transition: background 0.3s;
-      text-align: center;
-    }
-
-    .back-btn:hover {
-      background-color: #a57f59;
-    }
-
-    .footer {
-      background-color: #1A1A1A;
-      padding: 60px 40px;
-      color: #D8C3A5;
-      margin-top: 50px;
-      opacity: 0;
-      transform: translateY(60px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    .footer.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .footer-container {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    .footer h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-      color: #FFFFFF;
-    }
-
-    .footer hr {
-      width: 70%;
-      border: none;
-      border-top: 2px solid #C19A6B;
-      margin: 10px 0 20px 0;
-    }
-
-    .footer a {
-      color: #D8C3A5;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .footer a:hover {
-      color: #fff;
-    }
-
-    .footer ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .footer ul li {
-      margin-bottom: 8px;
-    }
-
-    .footer-logo {
-      width: 175px;
-      margin-bottom: 25px;
-    }
-
-    .footer-col p {
-      margin: 6px 0;
-    }
-
-    /* Адаптивність */
-    @media (max-width: 900px) {
-      .footer-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .footer-container {
-        grid-template-columns: 1fr;
-      }
-      .footer {
-        text-align: center;
-      }
-    }
-
-    /* Анімація */
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    /* Стрілка "вгору" */
-    #scrollToTop {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
-      background-color: #C19A6B;
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      font-size: 24px;
-      cursor: pointer;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: opacity 0.3s, transform 0.3s, background 0.3s;
-      z-index: 1000;
-    }
-
-    #scrollToTop:hover {
-      background-color: #C19A6B;
-      transform: scale(1.1);
-    }
-
-    /* Випадаюче меню */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropbtn {
-  color: #F5F5F0;
-  text-decoration: none;
-  font-size: 18px;
-  margin: 0 15px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.dropbtn:hover {
-  color: #D8C3A5;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f3e6d2;
-  min-width: 300px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-  border-radius: 8px;
-  z-index: 100;
-  top: 100%;
-  left: 0;
-  animation: dropdownFade 0.25s ease;
-}
-
-.dropdown-content.show {
-  display: block;
-}
-
-.dropdown-content a {
-  color: #3E2F27;
-  padding: 12px 18px;
-  text-decoration: none;
-  display: block;
-  font-size: 17px;
-  transition: background-color 0.3s ease, padding-left 0.2s ease;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-
-.dropdown-content a:last-child {
-  border-bottom: none;
-}
-
-.dropdown-content a:hover {
-  background-color: #e7d6bb;
-  padding-left: 22px;
-}
-
-/* Показуємо при наведенні */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Анімація появи меню */
-@keyframes dropdownFade {
-  from {opacity: 0; transform: translateY(10px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-/* Адаптивність */
-@media (max-width: 800px) {
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    background-color: transparent;
-    border-radius: 0;
-  }
-
-  .dropdown-content a {
-    padding: 10px 0;
-    border: none;
-    background: none;
-    color: #F5F5F0;
-  }
-
-  .dropdown-content a:hover {
-    background: none;
-    color: #D8C3A5;
-  }
-}
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -325,49 +35,110 @@
     </nav>
   </header>
 
-  <main class="privacy-container">
-    <h1>Datenschutzerklärung</h1>
+<main class="privacy-container">
 
-    <p>Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TMG). In dieser Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Website.</p>
+  <h1>Datenschutzerklärung</h1>
 
-    <h2>1. Verantwortlicher</h2>
-    <p>Innen Fix<br>
-    Inhaber: Max Mustermann<br>
-    Beispielstraße 12, 12345 Berlin<br>
-    Telefon: +49 178 3413 562<br>
-    E-Mail: info@innenfix.com</p>
+  <p>
+    Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges Anliegen.
+    Wir verarbeiten Ihre Daten ausschließlich im Rahmen der gesetzlichen Bestimmungen
+    der Datenschutz-Grundverordnung (DSGVO).
+  </p>
 
-    <h2>2. Erhebung und Verarbeitung personenbezogener Daten</h2>
-    <p>Wir erheben und verarbeiten personenbezogene Daten nur dann, wenn Sie uns diese freiwillig mitteilen – etwa durch das Ausfüllen des Kontaktformulars, eine E-Mail-Anfrage oder einen Anruf. Die angegebenen Daten (Name, E-Mail-Adresse, Telefonnummer, Nachricht) werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+  <h2>1. Verantwortlicher</h2>
+  <p>
+    <strong>Innen Fix UG (haftungsbeschränkt)</strong><br>
+    Geschäftsführer: Oleksandr Hryhorets<br>
+    Gutenbergstraße 15<br>
+    23566 Lübeck<br>
+    Deutschland<br>
+    E-Mail: <a href="mailto:info@innen-fix.de">info@innen-fix.de</a>
+  </p>
 
-    <h2>3. Zwecke der Datenverarbeitung</h2>
-    <p>Ihre Daten werden zu folgenden Zwecken verwendet:</p>
-    <ul>
-      <li>Beantwortung von Anfragen</li>
-      <li>Kontaktaufnahme zur Angebotserstellung oder Terminvereinbarung</li>
-      <li>Verbesserung unserer Website und Services</li>
-    </ul>
+  <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
+  <p>
+    Beim Besuch unserer Website werden automatisch Informationen durch den Hosting-Provider
+    erfasst (sogenannte Server-Logfiles). Diese beinhalten z.B. Browsertyp,
+    Betriebssystem, Referrer-URL sowie Uhrzeit des Zugriffs.
+    Diese Daten sind nicht bestimmten Personen zuordenbar.
+  </p>
 
-    <h2>4. Speicherung und Löschung</h2>
-    <p>Wir speichern Ihre Daten nur so lange, wie es für die Bearbeitung Ihrer Anfrage notwendig ist oder wie es gesetzlich vorgeschrieben ist. Danach werden Ihre Daten gelöscht.</p>
+  <h2>3. Kontaktaufnahme</h2>
+  <p>
+    Wenn Sie uns per E-Mail, Telefon oder Kontaktformular kontaktieren,
+    werden Ihre Angaben zur Bearbeitung der Anfrage gespeichert.
+    Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+  </p>
 
-    <h2>5. Weitergabe von Daten</h2>
-    <p>Eine Weitergabe Ihrer personenbezogenen Daten an Dritte erfolgt nur, wenn dies zur Vertragserfüllung notwendig ist oder eine gesetzliche Verpflichtung besteht. Eine Weitergabe zu Werbezwecken findet nicht statt.</p>
+  <h2>4. Zwecke der Datenverarbeitung</h2>
+  <ul>
+    <li>Bearbeitung von Anfragen</li>
+    <li>Kontaktaufnahme mit Interessenten</li>
+    <li>Terminvereinbarung und Angebotserstellung</li>
+  </ul>
 
-    <h2>6. Cookies</h2>
-    <p>Unsere Website verwendet Cookies, um die Benutzerfreundlichkeit zu verbessern. Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden. Sie können die Verwendung von Cookies in den Einstellungen Ihres Browsers deaktivieren.</p>
+  <h2>5. Cookies</h2>
+  <p>
+    Unsere Website verwendet keine Tracking- oder Analyse-Cookies
+    (z.B. Google Analytics oder Facebook Pixel).
+    Es werden ausschließlich technisch notwendige Funktionen genutzt.
+  </p>
 
-    <h2>7. Ihre Rechte</h2>
-    <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, können Sie sich bei der Datenschutzbehörde beschweren.</p>
+  <h2>6. Weitergabe von Daten</h2>
+  <p>
+    Eine Weitergabe Ihrer personenbezogenen Daten an Dritte erfolgt nicht,
+    es sei denn, wir sind gesetzlich dazu verpflichtet.
+  </p>
 
-    <h2>8. Kontakt</h2>
-    <p>Für alle Fragen zum Datenschutz wenden Sie sich bitte an:<br>
-    <b>Innen Fix</b><br>
-    E-Mail: info@innenfix.com<br>
-    Telefon: +49 178 3413 562</p>
+  <h2>7. Ihre Rechte</h2>
+  <ul>
+    <li>Recht auf Auskunft</li>
+    <li>Recht auf Berichtigung</li>
+    <li>Recht auf Löschung</li>
+    <li>Recht auf Einschränkung der Verarbeitung</li>
+    <li>Recht auf Widerspruch</li>
+  </ul>
 
-    <a href="index.html" class="back-btn">Zurück zur Startseite</a>
-  </main>
+  <h2>8. Beschwerderecht</h2>
+  <p>
+    Ihnen steht ein Beschwerderecht bei der zuständigen Datenschutzaufsichtsbehörde zu.
+  </p>
+
+  <h2>9. SSL-Verschlüsselung</h2>
+  <p>
+    Diese Website nutzt aus Sicherheitsgründen eine SSL-Verschlüsselung.
+  </p>
+
+  <h2>10. Hosting</h2>
+  <p>
+    Unsere Website wird über <strong>GitHub Pages</strong> bereitgestellt,
+    einem Dienst der <strong>GitHub Inc.</strong>, 88 Colin P Kelly Jr St,
+    San Francisco, CA 94107, USA.
+  </p>
+
+  <p>
+    Beim Aufruf der Website werden durch GitHub automatisch Informationen
+    in sogenannten Server-Logfiles erhoben. Diese Daten können unter anderem
+    die IP-Adresse, Browsertyp, Betriebssystem, Referrer-URL sowie Datum und
+    Uhrzeit des Zugriffs umfassen.
+  </p>
+
+  <p>
+    Die Verarbeitung erfolgt zur Gewährleistung eines sicheren und stabilen
+    Betriebs der Website auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO
+    (berechtigtes Interesse).
+  </p>
+
+  <p>
+    Es kann nicht ausgeschlossen werden, dass Daten in die USA übertragen
+    werden. GitHub verwendet geeignete Garantien gemäß Art. 46 DSGVO,
+    insbesondere die von der EU-Kommission genehmigten
+    Standardvertragsklauseln.
+  </p>
+
+  <a href="index.html" class="back-btn">Zurück zur Startseite</a>
+
+</main>
 
 <footer class="footer">
   <div class="footer-container">
@@ -380,8 +151,8 @@
     <div class="footer-col">
       <h3>Kontakt</h3>
       <hr>
-      <p>📧 <a href="mailto:info@innenfix.com">info@innenfix.com</a></p>
-      <p>📞 <a href="tel:+491783413562">+49 178 3413 562</a></p>
+      <p>📧 <a href="mailto:info@innen-fix.de">info@innen-fix.de</a></p>
+      <p>📞 <a href="tel:015231479708">0152 31479708</a></p>
     </div>
 
     <div class="footer-col">
@@ -397,6 +168,7 @@
       <ul>
         <li><a href="index.html#home">Home</a></li>
         <li><a href="index.html#services">Leistungen</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
         <li><a href="index.html#faq">FAQ</a></li>
       </ul>
     </div>
@@ -405,15 +177,15 @@
       <h3>Rechtliches</h3>
       <hr>
       <ul>
-        <li><a href="#">Impressum</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
         <li><a href="privacy.html">Datenschutzerklärung</a></li>
-        <li><a href="#">Barrierefreiheitserklärung</a></li>
+        <li><a href="barrierefreiheit.html">Barrierefreiheitserklärung</a></li>
       </ul>
     </div>
   </div>
 </footer>
 
-<button id="scrollToTop" title="Повернутись вгору">▲</button>
+<button id="scrollToTop" title="Nach oben" aria-label="Nach oben">▲</button>
 <script src="script.js"></script>
 </body>
 </html>

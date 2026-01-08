@@ -88,21 +88,30 @@ window.addEventListener("scroll", () => {
 });
 
 // Обробка форми
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+const contactForm = document.getElementById("contactForm");
 
-  alert("Дякуємо! Ваше повідомлення надіслано.");
-  this.reset();
-});
+if (contactForm) {
+  contactForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Дякуємо! Ваше повідомлення надіслано.");
+    this.reset();
+  });
+}
 
 // Плавна прокрутка до секцій "Наші послуги" та "Контакт"
-document.getElementById("to-services").addEventListener("click", () => {
-  document.querySelector(".services").scrollIntoView({ behavior: "smooth" });
-});
+const toServices = document.getElementById("to-services");
+if (toServices) {
+  toServices.addEventListener("click", () => {
+    document.querySelector(".services").scrollIntoView({ behavior: "smooth" });
+  });
+}
 
-document.getElementById("to-contact").addEventListener("click", () => {
-  document.querySelector(".contact-section").scrollIntoView({ behavior: "smooth" });
-});
+const toContact = document.getElementById("to-contact");
+if (toContact) {
+  toContact.addEventListener("click", () => {
+    document.querySelector(".contact-section").scrollIntoView({ behavior: "smooth" });
+  });
+}
 
 // FAQ Toggle with Icon Animation
 document.querySelectorAll(".faq-title").forEach(button => {
@@ -128,3 +137,76 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+const services = [
+  {
+    title: "Malerarbeiten",
+    link: "malerarbeiten.html",
+    image: "https://images.unsplash.com/photo-1598300053651-0b6b1f02b8f7"
+  },
+  {
+    title: "Trockenbau & Gipskarton",
+    link: "gipskarton.html",
+    image: "https://images.unsplash.com/photo-1599423300746-b62533397364"
+  },
+  {
+    title: "Bodenverlegung",
+    link: "bodenverlegung.html",
+    image: "https://images.unsplash.com/photo-1588854337115-1c67d9247e4f"
+  },
+  {
+    title: "Sockelleisten, Türen & Fenster",
+    link: "sockelleisten.html",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+  },
+  {
+    title: "Möbelmontage",
+    link: "mobelmontage.html",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
+  },
+  {
+    title: "Sanitärarbeiten",
+    link: "sanitararbeiten.html",
+    image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea"
+  },
+  {
+    title: "Elektroinstallationen",
+    link: "elektroinstallationsarbeiten.html",
+    image: "https://images.unsplash.com/photo-1581093458791-9f3c3900df5b"
+  },
+  {
+    title: "Fliesenarbeiten",
+    link: "fliesenarbeiten.html",
+    image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b"
+  },
+  {
+    title: "Sonstige Arbeiten",
+    link: "sonstiges.html",
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+  }
+];
+  
+let currentIndex = 0;
+
+const titleEl = document.getElementById("sliderTitle");
+const imageEl = document.getElementById("sliderImage");
+const linkEl  = document.getElementById("sliderLink");
+
+function updateSlider() {
+  const service = services[currentIndex];
+  titleEl.textContent = service.title;
+  imageEl.src = service.image;
+  linkEl.href = service.link;
+}
+
+document.querySelector(".next").addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % services.length;
+  updateSlider();
+});
+
+document.querySelector(".prev").addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + services.length) % services.length;
+  updateSlider();
+});
+
+updateSlider();

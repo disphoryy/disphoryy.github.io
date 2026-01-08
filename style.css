@@ -938,7 +938,7 @@ nav a:hover {
   margin-top: 100px;
   padding: 50px;
   background: linear-gradient(135deg, #EFE7DC, #E2D5C3);
-  width: 100vw;
+  width: 100%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -1080,7 +1080,7 @@ nav a:hover {
   }
 
   .privacy-container h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .privacy-container h2 {
@@ -1091,3 +1091,4 @@ nav a:hover {
     font-size: 16px;
   }
 }
+

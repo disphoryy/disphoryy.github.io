@@ -1027,6 +1027,13 @@ nav a:hover {
   .slider-wrapper {
     gap: 12px;
   }
+  
+    .slider-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+    backdrop-filter: blur(6px);
+  }
 }
 
 /* ===== PRIVACY PAGE ===== */
@@ -1202,3 +1209,4 @@ header {
     font-size: 24px;
   }
 }
+

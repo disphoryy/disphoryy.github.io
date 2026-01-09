@@ -87,17 +87,6 @@ window.addEventListener("scroll", () => {
   lastScrollY = currentScroll;
 });
 
-// Обробка форми
-const contactForm = document.getElementById("contactForm");
-
-if (contactForm) {
-  contactForm.addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("Дякуємо! Ваше повідомлення надіслано.");
-    this.reset();
-  });
-}
-
 // Плавна прокрутка до секцій "Наші послуги" та "Контакт"
 const toServices = document.getElementById("to-services");
 if (toServices) {
@@ -142,47 +131,47 @@ const services = [
   {
     title: "Malerarbeiten",
     link: "malerarbeiten.html",
-    image: "https://images.unsplash.com/photo-1598300053651-0b6b1f02b8f7"
+    image: "Malerarbeit.jpg"
   },
   {
     title: "Trockenbau & Gipskarton",
     link: "gipskarton.html",
-    image: "https://images.unsplash.com/photo-1599423300746-b62533397364"
+    image: "Gipskarton.jpg"
   },
   {
     title: "Bodenverlegung",
     link: "bodenverlegung.html",
-    image: "https://images.unsplash.com/photo-1588854337115-1c67d9247e4f"
+    image: "Boden.jpg"
   },
   {
     title: "Sockelleisten, Türen & Fenster",
     link: "sockelleisten.html",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+    image: "Door.jpg"
   },
   {
     title: "Möbelmontage",
     link: "mobelmontage.html",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
+    image: "Mobel.jpg"
   },
   {
     title: "Sanitärarbeiten",
     link: "sanitararbeiten.html",
-    image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea"
+    image: "Sanitar.jpg"
   },
   {
     title: "Elektroinstallationen",
     link: "elektroinstallationsarbeiten.html",
-    image: "https://images.unsplash.com/photo-1581093458791-9f3c3900df5b"
+    image: "elektro.jpg"
   },
   {
     title: "Fliesenarbeiten",
     link: "fliesenarbeiten.html",
-    image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b"
+    image: "Flies.jpg"
   },
   {
     title: "Sonstige Arbeiten",
     link: "sonstiges.html",
-    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+    image: "Sonstig.jpg"
   }
 ];
   

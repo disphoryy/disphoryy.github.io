@@ -159,11 +159,6 @@ const services = [
     image: "Sanitar.jpg"
   },
   {
-    title: "Elektroinstallationen",
-    link: "elektroinstallationsarbeiten.html",
-    image: "elektro.jpg"
-  },
-  {
     title: "Fliesenarbeiten",
     link: "fliesenarbeiten.html",
     image: "Flies.jpg"
@@ -199,3 +194,4 @@ document.querySelector(".prev").addEventListener("click", () => {
 });
 
 updateSlider();
+

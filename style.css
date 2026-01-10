@@ -1228,5 +1228,24 @@ header {
   }
 }
 
+/* ===== FIX service-included TEXT VISIBILITY ===== */
+.service-included .service-text p,
+.service-included .service-text li {
+  color: #EAEAEA !important;
+}
+
+.service-included .service-text h2 {
+  color: #FFFFFF !important;
+}
+
+.service-included .service-text ul li::before {
+  color: #C6A66A;
+}
+
+.service-included {
+  background: linear-gradient(135deg, #1C1C1C, #2F2F2F);
+}
+
+
 
 

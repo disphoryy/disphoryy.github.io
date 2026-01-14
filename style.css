@@ -1246,25 +1246,39 @@ header {
   background: linear-gradient(135deg, #1C1C1C, #2F2F2F);
 }
 
-/* ===== DISABLE HOVER EFFECTS ON TOUCH DEVICES ===== */
-@media (hover: none) and (pointer: coarse) {
+/* ===== MOBILE: FORCE SCROLL MODE (NO EFFECTS) ===== */
+@media (max-width: 768px) {
 
-  /* Вимикаємо всі hover-transform */
-  .service-section:hover,
-  .service-card:hover,
-  .slider-card:hover,
-  .next-service-btn:hover {
-    transform: none !important;
-    box-shadow: none !important;
-  }
-
-  .service-section:hover .service-image img,
-  .service-card:hover img {
-    transform: none !important;
-  }
-
-  /* Забираємо hover-залипання */
+  /* Вимикаємо ВСІ анімації */
   * {
-    -webkit-tap-highlight-color: transparent;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Забираємо всі transform (головна причина “залипання”) */
+  * {
+    transform: none !important;
+    will-change: auto !important;
+  }
+
+  /* Забороняємо елементам ловити свайп */
+  .service-card,
+  .service-section,
+  .slider-card,
+  .next-service-btn,
+  .slider-btn,
+  header {
+    touch-action: pan-y !important;
+  }
+
+  /* Слайдер робимо максимально простим */
+  .slider-wrapper {
+    overflow: hidden !important;
+  }
+
+  /* На всякий випадок */
+  html, body {
+    overflow-x: hidden !important;
+    overscroll-behavior: auto !important;
   }
 }

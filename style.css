@@ -1246,6 +1246,25 @@ header {
   background: linear-gradient(135deg, #1C1C1C, #2F2F2F);
 }
 
+/* ===== DISABLE HOVER EFFECTS ON TOUCH DEVICES ===== */
+@media (hover: none) and (pointer: coarse) {
 
+  /* Вимикаємо всі hover-transform */
+  .service-section:hover,
+  .service-card:hover,
+  .slider-card:hover,
+  .next-service-btn:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
 
+  .service-section:hover .service-image img,
+  .service-card:hover img {
+    transform: none !important;
+  }
 
+  /* Забираємо hover-залипання */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}

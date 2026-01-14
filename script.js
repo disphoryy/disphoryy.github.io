@@ -15,16 +15,10 @@ window.addEventListener("scroll", () => {
 
 // Дуже плавне повернення вгору
 scrollBtn.addEventListener("click", () => {
-  const scrollDuration = 800; // тривалість у мс (чим більше — тим плавніше)
-  const scrollStep = -window.scrollY / (scrollDuration / 16);
-
-  const smoothScroll = () => {
-    if (window.scrollY !== 0) {
-      window.scrollBy(0, scrollStep);
-      requestAnimationFrame(smoothScroll);
-    }
-  };
-  requestAnimationFrame(smoothScroll);
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });
 
 // Анімація появи карток при скролі
@@ -194,4 +188,5 @@ document.querySelector(".prev").addEventListener("click", () => {
 });
 
 updateSlider();
+
 

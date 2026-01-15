@@ -1277,3 +1277,23 @@ header {
     overscroll-behavior: auto !important;
   }
 }
+
+/* ===== MOBILE FIX: ALIGN NAV LINKS ===== */
+@media (max-width: 768px) {
+
+  nav {
+    align-items: center;
+  }
+
+  nav a,
+  .dropbtn {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    line-height: 1;
+
+  .dropdown {
+    display: flex;
+    align-items: center;
+  }
+}

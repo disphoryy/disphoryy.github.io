@@ -1249,19 +1249,16 @@ header {
 /* ===== MOBILE: FORCE SCROLL MODE (NO EFFECTS) ===== */
 @media (max-width: 768px) {
 
-  /* Вимикаємо ВСІ анімації */
   * {
     animation: none !important;
     transition: none !important;
   }
 
-  /* Забираємо всі transform (головна причина “залипання”) */
   * {
     transform: none !important;
     will-change: auto !important;
   }
 
-  /* Забороняємо елементам ловити свайп */
   .service-card,
   .service-section,
   .slider-card,
@@ -1271,15 +1268,12 @@ header {
     touch-action: pan-y !important;
   }
 
-  /* Слайдер робимо максимально простим */
   .slider-wrapper {
     overflow: hidden !important;
   }
 
-  /* На всякий випадок */
   html, body {
     overflow-x: hidden !important;
     overscroll-behavior: auto !important;
   }
 }
-

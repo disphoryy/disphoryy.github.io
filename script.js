@@ -40,22 +40,17 @@ revealCards();
 // Ефект друкарської машинки
 const text = "Innenrenovierung mit Präzision und Stil";
 let i = 0;
-const speed = 80;
-
-const element = document.getElementById("typed-text");
-element.innerHTML = ""; // очищаємо текст перед анімацією
+const speed = 80; // швидкість друку
 
 function typeWriter() {
   if (i < text.length) {
-    element.innerHTML += text.charAt(i);
+    document.getElementById("typed-text").innerHTML += text.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  typeWriter();
-});
+window.addEventListener("load", typeWriter);
 
 // Плавна поява футера
 const footer = document.querySelector(".footer");

@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://innen-fix.de/</loc>
     <priority>1.0</priority>
   </url>
+
+  <url>
+    <loc>https://innen-fix.de/malerarbeiten.html</loc>
+  </url>
+
+  <url>
+    <loc>https://innen-fix.de/gipskarton.html</loc>
+  </url>
+
+  <url>
+    <loc>https://innen-fix.de/bodenverlegung.html</loc>
+  </url>
+
+  <url>
+    <loc>https://innen-fix.de/sockelleisten.html</loc>
+  </url>
+
+  <url>
+    <loc>https://innen-fix.de/mobelmontage.html</loc>
+  </url>
+
+  <url>
+    <loc>https://innen-fix.de/sanitararbeiten.html</loc>
+  </url>
+
+  <url>
+    <loc>https://innen-fix.de/fliesenarbeiten.html</loc>
+  </url>
+
+  <url>
+    <loc>https://innen-fix.de/sonstiges.html</loc>
+  </url>
+
+  <url>
+    <loc>https://innen-fix.de/impressum.html</loc>
+  </url>
+
+  <url>
+    <loc>https://innen-fix.de/privacy.html</loc>
+  </url>
+
+  <url>
+    <loc>https://innen-fix.de/barrierefreiheit.html</loc>
+  </url>
+
 </urlset>
